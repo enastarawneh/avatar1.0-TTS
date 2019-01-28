@@ -1,0 +1,15 @@
+<launch>
+
+  <group ns="audio">
+    
+    <node pkg="recognize_speech" type="record_audio.py" name="recording1">
+  
+  
+  
+
+    </node>
+
+  </group>
+
+ 
+</launch>

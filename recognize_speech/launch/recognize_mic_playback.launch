@@ -1,0 +1,40 @@
+<launch>
+
+  <group ns="audio">
+    
+    <node pkg="recognize_speech" type="audio_source.py" name="audio1">
+      <param name="sink" value="/recognizer/audio" />
+  
+  
+
+    </node>
+
+  </group>
+
+  <group ns="texting">
+    
+    <node pkg="recognize_speech" type="recognize_audio_google.py" name="recognizer1">
+      <param name="source" value="/recognizer/audio" />
+      <param name="sink" value="/recognizer/text1" />
+  
+  
+
+    </node>
+
+  </group>
+
+ <group ns="understanding">
+    
+    <node pkg="recognize_speech" type="play_audio.py" name="understand1">
+      <param name="source" value="/recognizer/audio" />
+  
+  
+
+    </node>
+
+  </group>
+
+
+
+
+</launch>
